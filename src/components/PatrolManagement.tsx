@@ -66,7 +66,7 @@ export default function PatrolManagement() {
       </div>
 
       {/* Grid: list and mini-map */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px' }}>
+      <div className="patrol-main-layout">
         
         {/* Patrol table */}
         <div className="card" style={{ padding: 0 }}>

@@ -54,8 +54,15 @@ export default function App() {
   const [userName, setUserName] = useState('');
   
   const [activePage, setActivePage] = useState('Digital Command Centre');
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(window.innerWidth < 768);
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handlePageChange = (page: string) => {
+    setActivePage(page);
+    if (window.innerWidth < 768) {
+      setSidebarCollapsed(true);
+    }
+  };
   
   const [notifications, setNotifications] = useState<Notification[]>(INITIAL_NOTIFICATIONS);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -134,6 +141,14 @@ export default function App() {
   return (
     <div className="app-container">
       
+      {/* Sidebar Backdrop Overlay for Mobile */}
+      {!sidebarCollapsed && (
+        <div 
+          className="sidebar-backdrop" 
+          onClick={() => setSidebarCollapsed(true)}
+        />
+      )}
+      
       {/* Sidebar navigation */}
       <aside className={`app-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
         <div className="sidebar-header">
@@ -156,28 +171,28 @@ export default function App() {
             <ul className="sidebar-menu-list">
               <li 
                 className={`sidebar-menu-item ${activePage === 'Digital Command Centre' ? 'active' : ''}`}
-                onClick={() => setActivePage('Digital Command Centre')}
+                onClick={() => handlePageChange('Digital Command Centre')}
               >
                 <Tv className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Digital Command Centre</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Forest Divisions' ? 'active' : ''}`}
-                onClick={() => setActivePage('Forest Divisions')}
+                onClick={() => handlePageChange('Forest Divisions')}
               >
                 <Layers className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Forest Divisions</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Forest Ranges' ? 'active' : ''}`}
-                onClick={() => setActivePage('Forest Ranges')}
+                onClick={() => handlePageChange('Forest Ranges')}
               >
                 <Layers className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Forest Ranges</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Forest Beats' ? 'active' : ''}`}
-                onClick={() => setActivePage('Forest Beats')}
+                onClick={() => handlePageChange('Forest Beats')}
               >
                 <Layers className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Forest Beats</span>}
@@ -191,28 +206,28 @@ export default function App() {
             <ul className="sidebar-menu-list">
               <li 
                 className={`sidebar-menu-item ${activePage === 'AI Executive Brief' ? 'active' : ''}`}
-                onClick={() => setActivePage('AI Executive Brief')}
+                onClick={() => handlePageChange('AI Executive Brief')}
               >
                 <BarChart4 className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>AI Executive Brief</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Executive Analytics' ? 'active' : ''}`}
-                onClick={() => setActivePage('Executive Analytics')}
+                onClick={() => handlePageChange('Executive Analytics')}
               >
                 <BarChart4 className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Executive Analytics</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'AI Scenario Simulator' ? 'active' : ''}`}
-                onClick={() => setActivePage('AI Scenario Simulator')}
+                onClick={() => handlePageChange('AI Scenario Simulator')}
               >
                 <Cpu className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>AI Scenario Simulator</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'AI Decision Support' ? 'active' : ''}`}
-                onClick={() => setActivePage('AI Decision Support')}
+                onClick={() => handlePageChange('AI Decision Support')}
               >
                 <BrainCircuit className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Decision Support</span>}
@@ -226,21 +241,21 @@ export default function App() {
             <ul className="sidebar-menu-list">
               <li 
                 className={`sidebar-menu-item ${activePage === 'Incident Workflows' ? 'active' : ''}`}
-                onClick={() => setActivePage('Incident Workflows')}
+                onClick={() => handlePageChange('Incident Workflows')}
               >
                 <AlertOctagon className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Incident Workflows</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Patrol Tracking' ? 'active' : ''}`}
-                onClick={() => setActivePage('Patrol Tracking')}
+                onClick={() => handlePageChange('Patrol Tracking')}
               >
                 <Navigation className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Patrol Tracking</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Ranger Field App' ? 'active' : ''}`}
-                onClick={() => setActivePage('Ranger Field App')}
+                onClick={() => handlePageChange('Ranger Field App')}
               >
                 <Smartphone className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Ranger Field App</span>}
@@ -254,28 +269,28 @@ export default function App() {
             <ul className="sidebar-menu-list">
               <li 
                 className={`sidebar-menu-item ${activePage === 'Plantation Management' ? 'active' : ''}`}
-                onClick={() => setActivePage('Plantation Management')}
+                onClick={() => handlePageChange('Plantation Management')}
               >
                 <Sprout className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Plantation Management</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Wildlife Monitoring' ? 'active' : ''}`}
-                onClick={() => setActivePage('Wildlife Monitoring')}
+                onClick={() => handlePageChange('Wildlife Monitoring')}
               >
                 <Compass className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Wildlife Corridors</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Forest Assets' ? 'active' : ''}`}
-                onClick={() => setActivePage('Forest Assets')}
+                onClick={() => handlePageChange('Forest Assets')}
               >
                 <Settings className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Forest Assets</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Document Management' ? 'active' : ''}`}
-                onClick={() => setActivePage('Document Management')}
+                onClick={() => handlePageChange('Document Management')}
               >
                 <FolderOpen className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Document Manager</span>}
@@ -289,28 +304,28 @@ export default function App() {
             <ul className="sidebar-menu-list">
               <li 
                 className={`sidebar-menu-item ${activePage === 'Why AI' ? 'active' : ''}`}
-                onClick={() => setActivePage('Why AI')}
+                onClick={() => handlePageChange('Why AI')}
               >
                 <Milestone className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Why AI? (Comparison)</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Forest Digital Twin' ? 'active' : ''}`}
-                onClick={() => setActivePage('Forest Digital Twin')}
+                onClick={() => handlePageChange('Forest Digital Twin')}
               >
                 <Milestone className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Forest Digital Twin</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Innovation Highlights' ? 'active' : ''}`}
-                onClick={() => setActivePage('Innovation Highlights')}
+                onClick={() => handlePageChange('Innovation Highlights')}
               >
                 <Milestone className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Innovation Center</span>}
               </li>
               <li 
                 className={`sidebar-menu-item ${activePage === 'Platform Vision' ? 'active' : ''}`}
-                onClick={() => setActivePage('Platform Vision')}
+                onClick={() => handlePageChange('Platform Vision')}
               >
                 <Milestone className="sidebar-menu-icon" />
                 {!sidebarCollapsed && <span>Platform Road Map</span>}
@@ -389,7 +404,7 @@ export default function App() {
                 fontSize: '12px'
               }}
             >
-              <AI size={14} /> Forest AI Copilot
+              <AI size={14} /> <span className="nav-copilot-text">Forest AI Copilot</span>
             </button>
 
             {/* User Profile */}

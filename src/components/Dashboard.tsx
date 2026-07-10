@@ -179,7 +179,7 @@ export default function Dashboard({ userName, userRole: _userRole, onNavigate }:
       </div>
 
       {/* 3. Main content grid with charts & activity logs */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1.2fr', gap: '24px' }}>
+      <div className="dashboard-main-layout">
         
         {/* Left: Charts / Forest Health Map info */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>

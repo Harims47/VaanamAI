@@ -111,7 +111,7 @@ export default function CommandCentre() {
       </div>
 
       {/* Grid Dashboard */}
-      <div style={{ display: 'grid', gridTemplateColumns: '3fr 1.2fr', gap: '24px' }}>
+      <div className="command-centre-layout">
         
         {/* Left: GIS Map Panel */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>

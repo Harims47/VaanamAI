@@ -76,7 +76,7 @@ export default function MobileAppPreview({ onAddNotification }: MobilePreviewPro
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 2fr', gap: '32px', alignItems: 'center' }}>
+      <div className="mobile-preview-layout">
         
         {/* Left: Device Simulator Shell */}
         <div className="mobile-device-container">

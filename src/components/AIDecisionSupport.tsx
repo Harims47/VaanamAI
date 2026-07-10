@@ -191,7 +191,7 @@ export default function AIDecisionSupport() {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '24px' }}>
+            <div className="decision-support-grid-layout">
               <div>
                 <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase' }}>Analysis Narrative</span>
                 <p style={{ fontSize: '13px', color: 'var(--text-primary)', marginTop: '4px', lineHeight: '1.5' }}>
@@ -215,7 +215,7 @@ export default function AIDecisionSupport() {
 
               {/* Model Metrics */}
               {selectedModel.content.metrics && (
-                <div style={{ borderLeft: '1px solid var(--border-color)', paddingLeft: '24px' }}>
+                <div className="decision-metrics-panel">
                   <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
                     Model Key Metrics
                   </span>

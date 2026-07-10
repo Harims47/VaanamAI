@@ -32,23 +32,10 @@ export default function Login({ onLogin }: LoginProps) {
   };
 
   return (
-    <div style={{
-      display: 'flex',
-      minHeight: '100vh',
-      width: '100vw',
-      backgroundColor: '#f1f5f9'
-    }}>
+    <div className="login-container">
       {/* Left side: Hero Banner */}
-      <div style={{
-        flex: 1.2,
+      <div className="login-hero-banner" style={{
         background: 'linear-gradient(135deg, #064e3b, #022c22)',
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '48px',
-        color: '#f8fafc',
-        overflow: 'hidden'
       }}>
         {/* Forest abstract overlay pattern */}
         <div style={{
@@ -144,14 +131,7 @@ export default function Login({ onLogin }: LoginProps) {
       </div>
 
       {/* Right side: Login Card */}
-      <div style={{
-        flex: 0.9,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '32px',
-        backgroundColor: '#ffffff'
-      }}>
+      <div className="login-card-container">
         <div style={{ width: '100%', maxWidth: '400px' }}>
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 700, color: '#0f172a' }}>Secure System Sign-In</h2>

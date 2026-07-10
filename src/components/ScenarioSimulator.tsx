@@ -83,7 +83,7 @@ export default function ScenarioSimulator() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 2fr', gap: '32px' }}>
+      <div className="scenario-simulator-layout">
         
         {/* Sliders Input Panel */}
         <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>

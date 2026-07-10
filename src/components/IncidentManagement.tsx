@@ -223,7 +223,7 @@ export default function IncidentManagement() {
       </div>
 
       {/* Layout Split: Table on left, Drawer details on right */}
-      <div style={{ display: 'grid', gridTemplateColumns: selectedIncident ? '1.8fr 1.2fr' : '1fr', gap: '24px', transition: 'all 0.3s' }}>
+      <div className={`incident-grid-layout ${!selectedIncident ? 'single-col' : ''}`}>
         
         {/* Table view */}
         <div className="card" style={{ padding: 0 }}>
