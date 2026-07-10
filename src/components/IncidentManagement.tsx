@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
-  AlertOctagon, CheckCircle2, X, MapPin, 
+  AlertOctagon, X, MapPin, 
   Image, Send
 } from 'lucide-react';
 
@@ -322,7 +322,7 @@ export default function IncidentManagement() {
                         {isCompleted ? '✓' : idx + 1}
                       </div>
                       
-                      <div style={{ display: 'flex', flex: 1, justify: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', flex: 1, justifyContent: 'space-between', alignItems: 'center' }}>
                         <span style={{ 
                           fontSize: '12.5px', 
                           fontWeight: isActive || isCompleted ? 600 : 400,

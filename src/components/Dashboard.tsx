@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Flame, Users, Eye, ShieldAlert, HeartHandshake, Compass, 
   Sprout, Award, TrendingUp, Calendar, AlertCircle, FileText, CheckCircle2 
@@ -10,7 +9,7 @@ interface DashboardProps {
   onNavigate: (page: string) => void;
 }
 
-export default function Dashboard({ userName, userRole, onNavigate }: DashboardProps) {
+export default function Dashboard({ userName, userRole: _userRole, onNavigate }: DashboardProps) {
   // Mock data for Tamil Nadu Forest Division
   const kpiData = [
     { title: "Today's Fire Alerts", value: "12", sub: "3 Core, 9 Buffer", color: "danger", icon: Flame },
@@ -260,7 +259,7 @@ export default function Dashboard({ userName, userRole, onNavigate }: DashboardP
                 { name: "Sathyamangalam Division", health: 91, patrols: "94%", color: "#16a34a" },
                 { name: "Coimbatore Division", health: 85, patrols: "88%", color: "#f59e0b" }
               ].map((div, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', justify: 'space-between', gap: '16px' }}>
+                <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '16px' }}>
                   <span style={{ width: '180px', fontSize: '13px', fontWeight: 600 }}>{div.name}</span>
                   
                   {/* Visual health bar indicator */}

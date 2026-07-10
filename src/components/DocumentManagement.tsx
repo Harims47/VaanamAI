@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   FolderOpen, Folder, FileText, Image as ImageIcon, Video, 
   Download, File, Search 
@@ -110,7 +110,7 @@ export default function DocumentManagement() {
 
         {/* Right Side: Files list */}
         <div className="card" style={{ minHeight: '380px' }}>
-          <div style={{ display: 'flex', justify: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
             <span style={{ fontWeight: 700, fontSize: '15px' }}>{activeFolder}</span>
             <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600 }}>{files.length} items</span>
           </div>

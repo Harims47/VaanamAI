@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   Download, BrainCircuit, RefreshCw 
 } from 'lucide-react';

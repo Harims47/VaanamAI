@@ -1,6 +1,5 @@
-import React from 'react';
 import { 
-  BarChart4, Percent, Clock, Heart, DollarSign, Leaf, Users2, ShieldX, TrendingUp 
+  BarChart4, Percent, Clock, Heart, DollarSign, Leaf, ShieldX 
 } from 'lucide-react';
 
 export default function ExecutiveAnalytics() {
@@ -38,7 +37,7 @@ export default function ExecutiveAnalytics() {
         {analyticsData.map((data, i) => {
           const Icon = data.icon;
           return (
-            <div className="card" key={i} style={{ display: 'flex', flexDirection: 'column', justify: 'space-between', minHeight: '140px' }}>
+            <div className="card" key={i} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '140px' }}>
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)' }}>{data.title}</span>
@@ -117,7 +116,7 @@ export default function ExecutiveAnalytics() {
               { name: "M. Kathiravan", title: "RFO Gudalur", efficiency: "88%", cases: 5 },
               { name: "R. Vignesh", title: "Forest Guard", efficiency: "94%", cases: 1 }
             ].map((officer, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', justify: 'space-between' }}>
+              <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
                   <span style={{ fontSize: '13px', fontWeight: 600, display: 'block' }}>{officer.name}</span>
                   <span style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>{officer.title}</span>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Play, Compass, RefreshCw, Cpu } from 'lucide-react';
 
 

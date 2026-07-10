@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   Tv, Compass, AlertTriangle, Shield, CheckCircle, 
-  Layers, Thermometer, Wind, Droplets, Flame, RefreshCw, Eye
+  Thermometer, Wind, Droplets, Flame, RefreshCw, Eye
 } from 'lucide-react';
 
 
@@ -60,7 +60,7 @@ const INITIAL_ALERTS: AlertItem[] = [
 ];
 
 export default function CommandCentre() {
-  const [alerts, setAlerts] = useState<AlertItem[]>(INITIAL_ALERTS);
+  const [alerts] = useState<AlertItem[]>(INITIAL_ALERTS);
   const [selectedAlert, setSelectedAlert] = useState<AlertItem | null>(INITIAL_ALERTS[0]);
   const [activeLayers, setActiveLayers] = useState({
     fire: true,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
-  Smartphone, Radio, Camera, Flame, Eye, HeartPulse, RefreshCw, 
+  Smartphone, Camera, Flame, Eye, RefreshCw, 
   MapPin, ShieldAlert, CheckCircle, Wifi, Database 
 } from 'lucide-react';
 

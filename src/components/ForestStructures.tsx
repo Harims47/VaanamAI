@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Layers, Search, Download, Shield, Eye, MapPin } from 'lucide-react';
 
 interface StructureProps {

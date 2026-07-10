@@ -1,7 +1,7 @@
-import React from 'react';
-import { 
-  Sparkles, Network, Milestone, CheckCircle, 
-  ArrowRight, Cpu 
+
+import {
+  Sparkles, Network, Milestone, CheckCircle,
+  ArrowRight, Cpu
 } from 'lucide-react';
 
 interface StrategyProps {
@@ -11,7 +11,7 @@ interface StrategyProps {
 export default function Strategy({ view }: StrategyProps) {
   return (
     <div className="page-container">
-      
+
       {/* 1. WHY AI Page */}
       {view === 'whyai' && (
         <>
@@ -131,7 +131,7 @@ export default function Strategy({ view }: StrategyProps) {
 
           <div className="card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '32px' }}>
             <span className="card-title">State Forestry Cyber-Physical Data Loops</span>
-            
+
             {/* SVG Visualizing Flow */}
             <div style={{ width: '100%', maxWidth: '800px', margin: '24px 0' }}>
               <svg viewBox="0 0 800 240" style={{ width: '100%' }}>

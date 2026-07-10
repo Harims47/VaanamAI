@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navigation, Search } from 'lucide-react';
 
 
@@ -22,7 +22,7 @@ const PATROLS_DATA: Patrol[] = [
 ];
 
 export default function PatrolManagement() {
-  const [patrols, setPatrols] = useState<Patrol[]>(PATROLS_DATA);
+  const [patrols] = useState<Patrol[]>(PATROLS_DATA);
   const [searchTerm, setSearchTerm] = useState('');
 
   const getGpsBadgeColor = (status: string) => {

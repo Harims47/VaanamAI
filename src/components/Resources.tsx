@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Sprout, Eye, Truck, Search, Download } from 'lucide-react';
 
 interface ResourceProps {

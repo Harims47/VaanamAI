@@ -3,7 +3,7 @@ import {
   Tv, BarChart4, Layers, Navigation, AlertOctagon, Smartphone, Cpu, 
   BrainCircuit, Sprout, FolderOpen, Milestone, Settings, Moon, Sun, 
   Menu, X, Bell, Cpu as AI, Compass,
-  ChevronDown, LogOut
+  LogOut
 } from 'lucide-react';
 
 
